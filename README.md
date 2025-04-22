@@ -1,0 +1,2 @@
+# Realman_ECO65_adapter_gripper_moveit
+将睿尔曼ECO65机械臂结合相机转接板和两指电驱动夹爪，实现在gazebo内使用moveit2控制机械臂
