@@ -1,0 +1,21 @@
+<launch>
+  <!--<arg
+    name="model" />
+  <param
+    name="robot_description"
+    textfile="$(find rm_Lifting_robot_65B_jaw_description)/urdf/rm_Lifting_robot_65B_jaw_description.urdf" />-->
+  <param name="robot_description" command="$(find xacro)/xacro $(find rm_eco65_gripper)/urdf/rm_eco65_gripper_description.urdf.xacro" />
+  <node
+    name="joint_state_publisher_gui"
+    pkg="joint_state_publisher_gui"
+    type="joint_state_publisher_gui" />
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find rm_eco65_gripper)/urdf.rviz" />
+</launch>

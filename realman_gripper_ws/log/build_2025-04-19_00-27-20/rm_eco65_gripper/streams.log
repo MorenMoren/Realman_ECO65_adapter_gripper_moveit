@@ -1,0 +1,56 @@
+[0.009s] Invoking command in '/home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper -- -j22 -l22
+[0.026s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.101s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.155s] -- Configuring done
+[0.156s] -- Generating done
+[0.157s] -- Build files have been written to: /home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper
+[0.177s] Invoked command in '/home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper -- -j22 -l22
+[0.184s] Invoking command in '/home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper
+[0.190s] -- Install configuration: ""
+[0.190s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/launch
+[0.190s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/launch/gazebo.launch.py
+[0.190s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/launch/display.launch.py
+[0.190s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/urdf
+[0.190s] -- Installing: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/urdf/rm_joint.urdf.xacro
+[0.190s] -- Installing: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/urdf/rm_eco65_control.urdf.xacro
+[0.190s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/urdf/rm_eco65_gripper.urdf
+[0.190s] -- Installing: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/urdf/rm_eco65_gripper_description.urdf.xacro
+[0.190s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/urdf/rm_two_finger_gripper.urdf.xacro
+[0.190s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/urdf/rm_eco65_gazebo.urdf.xacro
+[0.190s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/urdf/common_gazebo.urdf.xacro
+[0.190s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/urdf/rm_gripper_control.urdf.xacro
+[0.190s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes
+[0.191s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_eco65_arm
+[0.191s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_eco65_arm/Link4.STL
+[0.191s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_eco65_arm/Link2.STL
+[0.191s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_eco65_arm/Link3.STL
+[0.191s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_eco65_arm/Link6_6f.STL
+[0.191s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_eco65_arm/Link1.STL
+[0.191s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_eco65_arm/Link5.STL
+[0.191s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_eco65_arm/Link6_6fb.STL
+[0.191s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_eco65_arm/baselink.STL
+[0.191s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_eco65_arm/Link6.STL
+[0.191s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_two_finger_gripper
+[0.191s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_two_finger_gripper/4C2_Link5.STL
+[0.191s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_two_finger_gripper/4C2_Link2.STL
+[0.191s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_two_finger_gripper/4C2_Link4.STL
+[0.191s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_two_finger_gripper/4C2_Link6.STL
+[0.192s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_two_finger_gripper/4C2_baselink.STL
+[0.192s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_two_finger_gripper/4C2_Link1.STL
+[0.192s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/meshes/rm_two_finger_gripper/4C2_Link3.STL
+[0.192s] -- Installing: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/ament_index/resource_index/package_run_dependencies/rm_eco65_gripper
+[0.192s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/ament_index/resource_index/parent_prefix_path/rm_eco65_gripper
+[0.192s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/environment/ament_prefix_path.sh
+[0.192s] -- Installing: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/environment/ament_prefix_path.dsv
+[0.192s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/environment/path.sh
+[0.192s] -- Installing: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/environment/path.dsv
+[0.192s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/local_setup.bash
+[0.192s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/local_setup.sh
+[0.192s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/local_setup.zsh
+[0.193s] -- Installing: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/local_setup.dsv
+[0.193s] -- Installing: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/package.dsv
+[0.193s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/ament_index/resource_index/packages/rm_eco65_gripper
+[0.193s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/cmake/rm_eco65_gripperConfig.cmake
+[0.193s] -- Up-to-date: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/cmake/rm_eco65_gripperConfig-version.cmake
+[0.193s] -- Installing: /home/morenmoren/realman_gripper_ws/install/rm_eco65_gripper/share/rm_eco65_gripper/package.xml
+[0.193s] Invoked command in '/home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper

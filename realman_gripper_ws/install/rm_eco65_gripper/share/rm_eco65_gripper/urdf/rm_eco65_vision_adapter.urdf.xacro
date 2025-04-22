@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot name="rm_eco65_gripper_description" xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- 引入其他xacro文件 -->
+  <!-- <xacro:include filename="$(find rm_eco65_gripper)/urdf/rm_eco65_gazebo.urdf.xacro"/> -->
+  <xacro:include filename="$(find rm_eco65_gripper)/urdf/rm_vision_adapter.urdf.xacro"/>
+  <xacro:include filename="$(find rm_eco65_gripper)/urdf/rm_eco65_control.urdf.xacro"/>
+  <link name="world"/>
+  <joint name="fixed" type="fixed">
+      <parent link="world"/>
+      <child link="baselink"/>
+  </joint>
+
+  <!-- 机械臂末端和两指夹爪的连接joint -->
+  <joint name="rm_eco65_adapter_joint" type="fixed">
+          <origin xyz="0 0 0" rpy="0 0 -1.57" />
+          <parent link="Link6" />
+          <child link="adapter" />
+          <axis xyz="0 0 0" />
+        </joint>
+</robot>

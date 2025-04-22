@@ -1,0 +1,43 @@
+# This config file is used by ros2_control
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    rm_eco65_group_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    
+    rm_gripper_group_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+rm_eco65_group_controller:
+  ros__parameters:
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+      - joint5
+      - joint6
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+rm_gripper_group_controller:
+  ros__parameters:
+    joints:
+      - jaw_Joint1
+      - jaw_Joint2
+      - jaw_Joint3
+      - jaw_Joint4
+      - jaw_Joint5
+      - jaw_Joint6
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity

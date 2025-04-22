@@ -1,0 +1,112 @@
+<!-- <?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rm_eco65_description">
+    <xacro:include filename="$(find rm_eco65_gripper)/urdf/rm_two_finger_griper.urdf.xacro" >
+    </xacro:include>
+
+    <gazebo reference="4C2_baselink">
+        <material>Gazebo/Purple</material>
+        <self_collide>false</self_collide>
+        <gravity>false</gravity>
+    </gazebo>
+    <gazebo reference="4C2_Link1">
+        <material>Gazebo/Red</material>
+        <gravity>false</gravity>
+    </gazebo>
+    <gazebo reference="4C2_Link2">
+        <material>Gazebo/Blue</material>
+        <gravity>false</gravity>
+    </gazebo>
+    <gazebo reference="4C2_Link3">
+        <material>Gazebo/Green</material>
+        <gravity>false</gravity>
+    </gazebo>
+    <gazebo reference="4C2_Link4">
+        <material>Gazebo/Yellow</material>
+        <gravity>false</gravity>
+    </gazebo>
+    <gazebo reference="4C2_Link5">
+        <material>Gazebo/Orange</material>
+        <gravity>false</gravity>
+    </gazebo>
+    <gazebo reference="4C2_Link6">
+        <material>Gazebo/Orange</material>
+        <gravity>false</gravity>
+    </gazebo>
+
+
+    <gazebo>
+        <is_static>true</is_static>
+        <self_collide>true</self_collide>
+    </gazebo>
+
+
+    <ros2_control name="GazeboSystem" type="system">
+        <hardware>
+            <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+        </hardware>
+        <joint name="jaw_Joint1">
+            <command_interface name="position"/>
+            <state_interface name="position">
+                <param name="initial_value">0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+        <joint name="jaw_Joint2">
+            <command_interface name="position"/>
+            <state_interface name="position">
+                <param name="initial_value">0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+        <joint name="jaw_Joint3">
+            <command_interface name="position"/>
+            <state_interface name="position">
+                <param name="initial_value">0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+        <joint name="jaw_Joint4">
+            <command_interface name="position"/>
+            <state_interface name="position">
+                <param name="initial_value">0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+        <joint name="jaw_Joint5">
+            <command_interface name="position"/>
+            <state_interface name="position">
+                <param name="initial_value">0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+        <joint name="jaw_Joint6">
+            <command_interface name="position"/>
+            <state_interface name="position">
+                <param name="initial_value">0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+    </ros2_control>
+
+</robot> --> 
+
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="rm65_jaw_transmission" params="joint_name">
+    <transmission name="${joint_name}_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${joint_name}">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="${joint_name}_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+  </xacro:macro>
+  <xacro:rm65_jaw_transmission joint_name="jaw_Joint1" />
+  <xacro:rm65_jaw_transmission joint_name="jaw_Joint2" />
+  <xacro:rm65_jaw_transmission joint_name="jaw_Joint3" />
+  <xacro:rm65_jaw_transmission joint_name="jaw_Joint4" />
+  <xacro:rm65_jaw_transmission joint_name="jaw_Joint5" />
+  <xacro:rm65_jaw_transmission joint_name="jaw_Joint6" />
+</robot>

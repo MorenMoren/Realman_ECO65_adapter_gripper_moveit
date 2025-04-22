@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rm_gripper_description">
+    <xacro:include filename="$(find rm_eco65_gripper)/urdf/rm_two_finger_gripper.urdf.xacro" >
+    </xacro:include>
+
+    <gazebo reference="4C2_baselink">
+        <material>Gazebo/Purple</material>
+        <self_collide>false</self_collide>
+        <gravity>false</gravity>
+    </gazebo>
+    <gazebo reference="4C2_Link1">
+        <material>Gazebo/Red</material>
+        <gravity>false</gravity>
+    </gazebo>
+    <gazebo reference="4C2_Link2">
+        <material>Gazebo/Blue</material>
+        <gravity>false</gravity>
+    </gazebo>
+    <gazebo reference="4C2_Link3">
+        <material>Gazebo/Green</material>
+        <gravity>false</gravity>
+    </gazebo>
+    <gazebo reference="4C2_Link4">
+        <material>Gazebo/Yellow</material>
+        <gravity>false</gravity>
+    </gazebo>
+    <gazebo reference="4C2_Link5">
+        <material>Gazebo/Orange</material>
+        <gravity>false</gravity>
+    </gazebo>
+    <gazebo reference="4C2_Link6">
+        <material>Gazebo/Orange</material>
+        <gravity>false</gravity>
+    </gazebo>
+
+
+    <!-- <gazebo>
+        <is_static>true</is_static>
+        <self_collide>true</self_collide>
+    </gazebo> -->
+
+
+</robot>

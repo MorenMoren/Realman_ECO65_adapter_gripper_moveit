@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot name="joint" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- 连接机械臂和世界坐标系 -->
+  <link name="world"/>
+  <joint name="fixed" type="fixed">
+      <parent link="world"/>
+      <child link="baselink"/>
+  </joint>
+
+  <!-- 机械臂末端和两指夹爪的连接joint -->
+  <joint name="rm_eco65_gripper_joint" type="fixed">
+    <origin xyz="0 0 0.03" rpy="0 0 -1.57" />
+    <parent link="Link6" />
+    <child link="4C2_baselink" />
+    <axis xyz="0 0 0" />
+  </joint>
+</robot>  

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rm_eco65_gripper_description">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import rm_eco65_gripper_description urdf file -->
+    <!-- <xacro:include filename="$(find rm_eco65_gripper)/urdf/rm_eco65_gripper_description.urdf.xacro" /> -->
+    <xacro:include filename="$(find rm_eco65_gripper)/urdf/rm_two_finger_gripper.urdf.xacro" >
+    </xacro:include>
+    <xacro:property name="link6_type" value="$(arg link6_type)" />
+    <xacro:include filename="$(find rm_eco65_gripper)/urdf/rm_eco65_gazebo.urdf.xacro" >
+        link6_type:=$(arg link6_type)
+    </xacro:include>
+    <xacro:include filename="$(find rm_eco65_gripper)/urdf/rm_joint.urdf.xacro"/>
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="rm_eco65_gripper_description.ros2_control.xacro" />
+
+
+    <xacro:rm_eco65_gripper_description_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

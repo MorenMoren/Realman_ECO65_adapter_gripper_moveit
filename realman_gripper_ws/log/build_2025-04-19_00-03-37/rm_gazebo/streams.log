@@ -1,0 +1,28 @@
+[0.007s] Invoking command in '/home/morenmoren/realman_gripper_ws/build/rm_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/morenmoren/realman_gripper_ws/src/rm_eco65_gripper -DCMAKE_INSTALL_PREFIX=/home/morenmoren/realman_gripper_ws/install/rm_gazebo
+[0.128s] -- The C compiler identification is GNU 12.3.0
+[0.205s] -- The CXX compiler identification is GNU 11.4.0
+[0.212s] -- Detecting C compiler ABI info
+[0.266s] -- Detecting C compiler ABI info - done
+[0.269s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.270s] -- Detecting C compile features
+[0.270s] -- Detecting C compile features - done
+[0.272s] -- Detecting CXX compiler ABI info
+[0.333s] -- Detecting CXX compiler ABI info - done
+[0.340s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.340s] -- Detecting CXX compile features
+[0.340s] -- Detecting CXX compile features - done
+[0.342s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.548s] -- Found Python3: /home/morenmoren/miniconda3/bin/python3 (found version "3.12.9") found components: Interpreter 
+[0.620s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.676s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:53 (message):
+[0.676s]   ament_package_xml() package name 'rm_gazebo' in '/package.xml' does not
+[0.676s]   match current PROJECT_NAME 'rm_eco65_gripper'.  You must call project()
+[0.676s]   with the same package name before.
+[0.676s] Call Stack (most recent call first):
+[0.676s]   /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[0.677s]   CMakeLists.txt:37 (ament_lint_auto_find_test_dependencies)
+[0.677s] 
+[0.677s] [0m
+[0.677s] -- Configuring incomplete, errors occurred!
+[0.677s] See also "/home/morenmoren/realman_gripper_ws/build/rm_gazebo/CMakeFiles/CMakeOutput.log".
+[0.682s] Invoked command in '/home/morenmoren/realman_gripper_ws/build/rm_gazebo' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/morenmoren/realman_gripper_ws/src/rm_eco65_gripper -DCMAKE_INSTALL_PREFIX=/home/morenmoren/realman_gripper_ws/install/rm_gazebo

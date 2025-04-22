@@ -1,0 +1,4 @@
+Invoking command in '/home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper -- -j22 -l22
+Invoked command in '/home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper -- -j22 -l22
+Invoking command in '/home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper
+Invoked command in '/home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/morenmoren/realman_gripper_ws/build/rm_eco65_gripper

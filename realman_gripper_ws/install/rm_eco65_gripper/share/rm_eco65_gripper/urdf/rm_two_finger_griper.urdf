@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<robot name="4C2jiazhua" xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- Define reusable properties for mass, inertia, color, etc. -->
+  <xacro:property name="mesh_path" value="package://rm_eco65_gripper/meshes/rm_two_finger_gripper/" />
+  <!-- Macro for visual and collision elements -->
+  <xacro:macro name="visual_collision" params="mesh">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="${mesh_path}${mesh}" />
+      </geometry>
+      <material name="">
+        <color rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="${mesh_path}${mesh}" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+
+  <!-- Define 4C2_baselink -->
+  <link name="4C2_baselink">
+    <inertial>
+      <origin xyz="1.5645E-05 -4.1838E-06 0.038" rpy="0 0 0" />
+      <mass value="0.072633" />
+      <inertia ixx="5.095E-05" ixy="-7.3167E-13" ixz="2.0229E-08"
+        iyy="6.0883E-05" iyz="-4.5583E-09" izz="1.933E-05" />
+    </inertial>
+    <xacro:visual_collision mesh="4C2_baselink.STL" />
+  </link>
+  <!-- Define Link1 -->
+  <link name="4C2_Link1">
+    <inertial>
+      <origin xyz="0.0087669 0.009 0.013992" rpy="0 0 0" />
+      <mass value="0.0024292" />
+      <inertia ixx="5.1061E-07" ixy="-8.6739E-19" ixz="-2.508E-07"
+        iyy="5.7398E-07" iyz="-1.3667E-18" izz="2.6747E-07" />
+    </inertial>
+    <xacro:visual_collision mesh="4C2_Link1.STL" />
+  </link>
+  <!-- Define Link5 -->
+  <link name="4C2_Link5">
+    <inertial>
+      <origin xyz="0.011864 0.006 0.011367" rpy="0 0 0" />
+      <mass value="0.0045068" />
+      <inertia ixx="5.1288E-07" ixy="-9.8137E-14" ixz="-9.4703E-08"
+        iyy="5.3203E-07" iyz="-6.212E-14" izz="2.009E-07" />
+    </inertial>
+    <xacro:visual_collision mesh="4C2_Link5.STL" />
+  </link>
+  <!-- Define Link2 -->
+  <link name="4C2_Link2">
+    <inertial>
+      <origin xyz="0.0087435 0.009 0.013955" rpy="0 0 0" />
+      <mass value="0.0038971" />
+      <inertia ixx="5.6941E-07" ixy="-1.0711E-18" ixz="-2.6891E-07"
+        iyy="6.2305E-07" iyz="-1.6845E-18" izz="3.0871E-07" />
+    </inertial>
+    <xacro:visual_collision mesh="4C2_Link2.STL" />
+  </link>
+  <!-- Link3 -->
+  <link name="4C2_Link3">
+    <inertial>
+      <origin xyz="-0.0087435 0.009 0.013955" rpy="0 0 0" />
+      <mass value="0.0038971" />
+      <inertia ixx="5.6941E-07" ixy="1.0666E-18" ixz="2.6891E-07"
+        iyy="6.2305E-07" iyz="-1.8084E-18" izz="3.0871E-07" />
+    </inertial>
+    <xacro:visual_collision mesh="4C2_Link3.STL" />
+  </link>
+  <!-- Define Link4 -->
+  <link name="4C2_Link4">
+    <inertial>
+      <origin xyz="-0.0087669 0.009 0.013992" rpy="0 0 0" />
+      <mass value="0.0024292" />
+      <inertia ixx="5.1061E-07" ixy="-9.5279E-19" ixz="2.508E-07"
+        iyy="5.7398E-07" iyz="7.6863E-19" izz="2.6747E-07" />
+    </inertial>
+    <xacro:visual_collision mesh="4C2_Link4.STL" />
+  </link>
+  <!-- Define Link6 -->
+  <link name="4C2_Link6">
+    <inertial>
+      <origin xyz="-0.011864 0.006 0.011367" rpy="0 0 0" />
+      <mass value="0.0045068" />
+      <inertia ixx="5.1288E-07" ixy="-9.8137E-14" ixz="9.4703E-08"
+        iyy="5.3203E-07" iyz="6.2119E-14" izz="2.009E-07" />
+    </inertial>
+    <xacro:visual_collision mesh="4C2_Link6.STL" />
+  </link>
+  <!-- Define Joint1 between baselink and Link1 -->
+  <joint name="jaw_Joint1" type="revolute">
+    <origin xyz="-0.04 -0.009 0.079" rpy="0 0 0" />
+    <parent link="4C2_baselink" />
+    <child link="4C2_Link1" />
+    <axis xyz="0 -1 0" />
+    <limit lower="0" upper="0.82" effort="1" velocity="1" /> 
+  </joint>
+  <!-- Define Joint5 between Link1 and Link5, mimicking Joint1 -->
+  <joint name="jaw_Joint5" type="revolute">
+    <origin xyz="0.0223 0.003 0.035591" rpy="0 0 0" />
+    <parent link="4C2_Link1" />
+    <child link="4C2_Link5" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="0.82" effort="1" velocity="1" />
+    <mimic joint="jaw_Joint1"/>
+  </joint>
+  <!-- Define Joint2 between baselink and Link2, with reversed mimic -->
+  <joint name="jaw_Joint2" type="revolute">
+    <origin xyz="-0.03 -0.009 0.081" rpy="0 0 0" />
+    <parent link="4C2_baselink" />
+    <child link="4C2_Link2" />
+    <axis xyz="0 -1 0" />
+    <limit lower="0" upper="0.82" effort="1" velocity="1" />
+    <mimic joint="jaw_Joint1"/>
+  </joint>
+  <!-- Joint3 -->
+  <joint name="jaw_Joint3"
+    type="revolute">
+    <origin xyz="0.03 -0.009 0.081" rpy="0 0 0" />
+    <parent link="4C2_baselink" />
+    <child link="4C2_Link3" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-0.82" upper="0" effort="1" velocity="1" />
+    <mimic joint="jaw_Joint1" multiplier="-1"  offset="0"/>
+  </joint>
+  <!-- Define Joint4 between baselink and Link4 -->
+  <joint name="jaw_Joint4" type="revolute">
+    <origin xyz="0.04 -0.009 0.079" rpy="0 0 0" />
+    <parent link="4C2_baselink" />
+    <child link="4C2_Link4" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-0.82" upper="0" effort="1" velocity="1" />
+    <mimic joint="jaw_Joint1" multiplier="-1"  offset="0"/>
+  </joint>
+  <!-- Define Joint6 between baselink and Link6 -->
+  <joint name="jaw_Joint6" type="revolute">
+    <origin xyz="-0.0223 0.003 0.035591" rpy="0 0 0" />
+    <parent link="4C2_Link4" />
+    <child link="4C2_Link6" />
+    <axis xyz="0 -1 0" />
+    <limit lower="0" upper="0.82" effort="1" velocity="1" />
+    <mimic joint="jaw_Joint1"/>
+  </joint>
+</robot>

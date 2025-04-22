@@ -1,0 +1,41 @@
+[0.007s] Invoking command in '/home/morenmoren/realman_gripper_ws/build/rm_Lifting_robot_65B_jaw_description': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/morenmoren/realman_gripper_ws/src/rm_eco65_gripper -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/morenmoren/realman_gripper_ws/install/rm_Lifting_robot_65B_jaw_description
+[0.028s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.029s]   Compatibility with CMake < 2.8.12 will be removed from a future version of
+[0.029s]   CMake.
+[0.029s] 
+[0.029s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.029s]   CMake that the project does not need compatibility with older versions.
+[0.029s] 
+[0.029s] [0m
+[0.140s] -- The C compiler identification is GNU 12.3.0
+[0.209s] -- The CXX compiler identification is GNU 11.4.0
+[0.216s] -- Detecting C compiler ABI info
+[0.275s] -- Detecting C compiler ABI info - done
+[0.279s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.280s] -- Detecting C compile features
+[0.280s] -- Detecting C compile features - done
+[0.282s] -- Detecting CXX compiler ABI info
+[0.344s] -- Detecting CXX compiler ABI info - done
+[0.351s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.352s] -- Detecting CXX compile features
+[0.352s] -- Detecting CXX compile features - done
+[0.358s] [31mCMake Error at CMakeLists.txt:5 (find_package):
+[0.358s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.359s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.359s]   CMake did not find one.
+[0.359s] 
+[0.359s]   Could not find a package configuration file provided by "catkin" with any
+[0.359s]   of the following names:
+[0.359s] 
+[0.359s]     catkinConfig.cmake
+[0.359s]     catkin-config.cmake
+[0.359s] 
+[0.359s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.359s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.359s]   provides a separate development package or SDK, be sure it has been
+[0.359s]   installed.
+[0.359s] 
+[0.360s] [0m
+[0.360s] -- Configuring incomplete, errors occurred!
+[0.360s] See also "/home/morenmoren/realman_gripper_ws/build/rm_Lifting_robot_65B_jaw_description/CMakeFiles/CMakeOutput.log".
+[0.361s] Invoked command in '/home/morenmoren/realman_gripper_ws/build/rm_Lifting_robot_65B_jaw_description' returned '1': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/morenmoren/realman_gripper_ws/src/rm_eco65_gripper -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/morenmoren/realman_gripper_ws/install/rm_Lifting_robot_65B_jaw_description
